@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link media="all" href="css/autoptimize_5eaa825ed5418fe7c35cba15f004d85e.css" rel="stylesheet" />
+    <link media="only screen and (max-width: 768px)" href="css/autoptimize_57afcea827824d1db313888418fe13fa.css"
+        rel="stylesheet" />
+    <link media="screen" href="css/autoptimize_abea50eb5cad43656f88878872d6f753.css" rel="stylesheet" />
+    <title>Wedding Quốc Khánh & Lệ Giang</title>
+    <link rel='dns-prefetch' href='//ajax.aspnetcdn.com' />
+    <link rel='dns-prefetch' href='//ajax.googleapis.com' />
+    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+    <link rel='stylesheet' id='jquery-ui-css-css'
+        href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/themes/base/jquery-ui.css?ver=4.6.9' media='all' />
+    <link rel='stylesheet' id='wedding-fonts-css'
+        href='https://fonts.googleapis.com/css?family=Bree+Serif%7CLato&#038;ver=1.0.0' media='all' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script>
+        /*  */
+        var rsvp_plugin_vars = {
+            "askEmail": "Please enter an email address that we can use to contact you about the extra guest.  We have to keep a pretty close eye on the number of attendees.  Thanks!",
+            "customNote": "If you are adding additional RSVPs please enter your email address in case we have questions",
+            "newAttending1LastName": "Please enter a last name",
+            "newAttending1FirstName": "Please enter a first name",
+            "newAttending2LastName": "Please enter a last name",
+            "newAttending2FirstName": "Please enter a first name",
+            "newAttending3LastName": "Please enter a last name",
+            "newAttending3FirstName": "Please enter a first name",
+            "attendeeFirstName": "Please enter a first name",
+            "attendeeLastName": "Please enter a last name",
+            "firstName": "Please enter your first name",
+            "lastName": "Please enter your last name",
+            "passcode": "Please enter your password"
+        };
+        /*  */
+
+    </script>
+    <script>
+        jQuery(function () {
+            var a = null;
+            setInterval(function () {
+                jQuery(".YTPOverlay").each(function () {
+                    var b = jQuery(this);
+                    jQuery("[class*=ytp_wm_]", b).remove();
+                    a = "ytp_wm_" + Math.floor(1E5 * Math.random());
+                    var c = jQuery("<img/>").attr("src", "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAG9CAYAAAB56wSaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAADSBJREFUeNrsXT90IjcTl/2ojtRcDTWuQ23qj357fzWpoTZ1qEO/Pam5mtRsbeqjPq7OKm+Wk+XRakZ/FmzPvMdzsge7v9WM5p9GI6WEeHTn+8LPnz/7X758OVNvWH9/Uv8Z1p8BXDrVn319j2MyYPVD9M3X9Wdb37j0fFeDWRqAbKrqzzP1JX3AFvWfCfyvfuM/sTcHUKv60/c8T4N6ooC7bwH1YIBSwJ4VXLfpDwIoBd9ZUkbsvuXfHpFrx/ptD9YLTAE0lcbwm2Bg2I8xOSsCJt3vQcAc7KqQ0Ro6hH2vAdffn8HksWkSOmJj5NoOufbg+P26EfD67w5mJOXlvcAwQT5RXwCZdQcur13ARvYFm40tI1al0Pz3DI3eRzQ8NrLYCwxSAaOMzgxjdz2yJ+LIvrQB6zmuYzef16PUgJ465GvvsJ0D5AXOIcAOjgmx8HAAm7lPxPv7WQns4ApxZdvRerQKh3x9ixH+v5jASkRPFQ45PAQDg7dfE0FtkYc9upRvKkdxAnIycLgxZQ1q6/jtzJIx7TCukgCzWDM0dFdFYQn8bgEzfcHxhrOTNvbgDd8uaQsCLFYheiwHoAFYiymIw/aqwEDG/kfxwToBBu7zjOl25wEG7GoA9WPu1UvIrkdHnNA9sEB2VT7BZylYy2GcBbBrB1bilFrzD43pzqFjiMbvEdnlcgwpdA4xQ70WQAUAGjDZNc0t/NQI+wSAtOtzpoT/uWdlBTHkLoeCDgW2hRmWzYW5D/ydnp2bmm1PudyZGFZe9FkNTodtf1McxxTAlgyvQH9nUgM8ZQcGb39A/Kg2SsZWjubvG54DB8AJ0lKHLMCQyGnGtAZH0HW7bMAs/6sAGaMa9LMipOfvUshDCJshDZoXWAibOwdGdZOuBgxxLF95KlcH5vLtfMCuFY0/qPdKdx4P9pUGD/W96nut7FnqYyXHg62UlWM1AtxX7jU1EsoZ8H51vEA0sPtblTEBJsAEmAB778A4mn+A2E/MjX6svzeODetYwBQtAzQVGRNgRBmrlJDQB6bggBdZI79EU/XnhVvFGQWMmXZ6lf/PBgwpVaCSBqUzivvkwGpQ8wQ2cM0JmO8JoIpEhnnOWc6594AaEj2KimgpyAsWPrfn/y1yo3Ooezsd4FkX78OLroNlDB6wQf6JtDAKv1+qt8vSpLLmNlZOHCqAtFoLI/kMQOxRe4iRMQwYa8UNwGEL8+MYYEPkQSH5Mew3oxhg/RT+GYzamRuccDzYHxE67JgTWJRRlmBEoiQCFUiKQFgpwD6k8C+VkJDQDeUuYFU2G9UO5CJUXYyvOWKi+T+FSSpFNwh9Ss2fkoxSQf2XtAOsi8K2pp+BmQvZuPbLdanHCvU2QeNNeXYB7CvzemfAvjOvdwZMWxA7P7b11Zjd7KwUEs3fIk86Da836D2ATGkh1zJVcooq7xjCa2/dxxpz+FbpvBqfDAxGYK7whdNLyxtI6lESeyRwvvY4UwDVRnuwhVSPl7SW1POwj7KiO2GKYaPTgo04ZVeNC9wRRnAfGrP2Eo7EhbXmtn6oNni2vhO1ljR2CO4MCriXlOgKZq6tJpIu2VTmbIIH7pCcBLa085Iz4MUML1VhHnMCUxHAlAD7tEmVtoziNueDfXtGhJUCLDfJIpeQkJgkMUkC7B2YJFLkpAL6cHYBrIk9y9TpyzZ1wS38rlIC9GV7QvpAJQHISdx1CjCkm5Zmb6HoG+2CAMbsGckKMDo5zO2vQu3akCxrTUyLkoH1EgAKakeYDZjRVpVaaqMTMOUtzcoTCP0uy6zsClBOzR8FiGIri2sAogh/cQ1AqdSFBvPNmKWcYOSQE9hUhW8/kyhJgAkJfWhK4VprWzqiaPPcUVJTg/G7w2s9Q9rgnxj7yd3APlN4BV2bgd9w94hzA96l5UY3I2Ov3g6RkdQ9ydZJgQGolfq1Q/UMo7BjOpisbs0UYGsDFOvmyM5n8sj5NrA/GTfVVQTzgM3FC4PdU0pv/lZgRh/YRoif4frQt2tQBy6QxlLwIgv1q06xsI+f4Y6Y+fA1VDw1k0DffIE9AEZ5bo4OgGs2w/d9TqIP2OWQMENxmt1LJ/YDoHeB6WJfRgcmy8nwfPnAwH/vG3495g7v7Z6uUKViss0enUafDUIrh83N60djNEzWfXMI/Nl6GXME/zH+O6hyuI9EM79Z32mzi+bMdeU2stVax3ZkjgNmyMJ3x+RwhXWmvXTZUTYw0/6NDGV5smbc1DZFoL8GDpYPqMBcAe+LJSPNbCrV66zhHHTV2Zg0tm4rHfL2wh4xa3Smli6qkBk8ho8N6lKFbvhxjaoJ7hBSGjPUtALPilaopg32xrIkfURtBOXHNoZcrEyHr+UohiNkf8zvTtSv87y0JZnHAjMrMs8ADjtfsNFx35GuNM15Sc1ozSl9oyj+mJ0mL33txa1RtZ2BdL3TEXBNExdX356JetuunNWCiXv01QKZeWdjMgwd/77KupbETBafYVTztvlCQDbH2prC/wNG7xgSsgm9OwLdd3OgCkrdUI94syaUGyEeaQXex65t9sE9/lDE1Tqq5n8iqgdUX2H3iDo4wDK+VFo24EDvzTFvN7ZMK6Q94dywFGsVuPLb87AwJOAYWKdqq6TAWoTUjKiHDgATjyyWMcBGbfJj6SRqUs55JjlHxmwleMRmHDyEYhdLSGOR9o/EbmbBwj0sfpxTnUuWgkXCfiqw4LO7Up3GiD2YvGUxde6CIujqFoGpDwmMU9J8akmE9DH10jZhYvr2YPksjokaiowJMCV9e4Q+MbVpfrse7EdoB3lYkRul0vzPSGC7sB7YR1zwF8T/GilmB7hYf2yEvMBSJdgVIZpfgAkwASbAruAovomEEPuJBRy6xAaLorKFb0lJdqQKMKEPQze5QtboMVgp69+i8OvShA3nnKMuwjdb8+vQbdNVc8YQk7QHgKdbA9aQzgYFlS7Eylh1TfmjLKTq8N6Xe00uf9TaHurOQb1kWKaQP05tT3NKXhLWRa2JOwA+AHuHOYHdB9zwABVzu5zqohcwYk1HyunNAAvYPpsXGMjVnKA2/ttVo9oXXZPoMWrZyxnURLLIqs0kPSnCTgUVsbwcykofKG2y/sxlzENysBrIOrf7w60iSCpHKYAlk6OmK7jvBXtdyZFRHNd05g0GtkpRMhraqKPXYhP3kYCa40iHXc1KH7umKcxWLxEgza7HlIa9dwV2VT7BD3UUQ7qGsN1ujms9NKY7h1ibRcmsBHZNVfiJU+ek9WMtm1V87JrmFn5OT5XLueGpAuCYWaln1y51k5dYYFmcw6jwzXAidd6CfAx3l6y86LManLarf6d0Hn2tfalegf7OpAZ4yg4M3v6A+FFtlIytHM3fNzwHDoCgGCFoXxK3r51hmrZJ9755/K8CZIxq0M8AsMwGLIbNyfNjqdjcOTCqm3Q1YIhj+cpTuTowl29HbfSoOgbo7e7W6wjICpkMUkUgwASYABNg1yBfiiAVDZIBY6QIRMYEWKiMVUpI6AMTt1JlovC0lG5AtQvdHhQEDOLCQtHWxy9npmYFhrTDpBDpDNRYBVso/rJe02sxj+a3Ok9yacxtWc7R/JMWVplC7srq6GXCQ1fA3gh3SxHSQy4Zw2TrzYzT/w+tVNkHtIYCs1OXlWem7RE5fcg1K006ENSEOIoC7N0Ak31JImMSVyIkh7cKda1gS25HLFEXAkyAJdb8Ng1ig1jL7Ul2JlfM+VsYiT8mwN7NrLycindrwE5d7d8VGRNgnxqYanGt+7c6YuuU3kSOYCTrrsAYGdN5/KYSvX+Lwt+Uys9uhZWoeVKZ91i2AdPBrY912eTvzqMuqOuUybdqUBZSOTufN6k2t3CWnqktJtp6E5tR0iIJMANgkt31OZokNKdMZT3gJNSIP6jI9ciUrnXIOfV5gTFbSWxV7iYJTGFP2s/nLoF6yNIBKWaRK6lCjRJ+g7J2OQoB1klfKA6wTjtpUYBllaNQYMlbSYDKqSgj38W+JK1u1pYe9J6o0UXAix1a/RR6eGtK+sq83hmw78zrnQErEaO+9enCTva+hcxKoQ9DubbKPkJM0IdQ7qCYTfnuGMI7sZzGCjmfa+5xv8lnKN0RR2DucK0vVZ7IeahR4HwlzfbZqC4fba3oB6aQSp57hMjIR9yD5xqdFmzEKU0RXOCOMIKuaN0bl/YSjsSFtTWbVlaQbB9gMYpJEYwdgjuDhMiyxTaauY6DCqgq5hjxypxN8MAdknTBdkG85EyqYIaXqjCPOYGpCGBKgOUmqRxGZq9Uqgiwq5JUDgsJiUkSkyTA3oFJIkVOKsEBhzmANbFn2eWyoC+lhI1eMoCUDezcNr5JAHISd50CDCkI0ewtFH1XcxDA4BxsboDRyWFue0xq071kWWtiWpQMrJcAUFA3+WzAAsppdAKmvKVZeQKh32WZlV0Byqn5owBRbGVxDUAU4S+uASiVurhscOEWjKfcYoZRzLYziZIEmNC7on8FGACaNfrF+pUsRgAAAABJRU5ErkJggg==");
+                    ytp_wm = jQuery("<div/>").addClass(a).html(c);
+                    c.attr("style", "filter:none!important;-webkit-transform:none!important;transform:none!important;padding:0!important;margin:0!important;height:100%!important; width:auto!important;display:block!important;visibility:visible!important;top:0!important;right:0!important;opacity:1!important;position:absolute!important;margin:auto!important;z-index:10000!important;");
+                    ytp_wm.attr("style", "filter:none!important;-webkit-transform:none!important;transform:none!important;padding:0!important;margin:0!important;display:block!important;position:absolute!important;top:0!important;bottom:0!important;right:0!important;margin:auto!important;z-index:10000!important;width:100%!important;height:100%!important;max-height:220px!important;");
+                    b.prepend(ytp_wm)
+                })
+            }, 5E3)
+        });
+
+    </script>
+</head>
+
+<body class="page page-id-1556 page-template page-template-template-one-page page-template-template-one-page-php"><a
+        href="#wed_page" class="wed_top ti ti-angle-up wed_go"></a>
+    <div class="wed_firefly">
+        <div class="jqueryFireFly" data-total="15" data-minPixel="20" data-maxPixel="55"></div>
+    </div>
+    <div class="wed_page_loader">
+        <div class="wed_preloader_couples wed_preloader_content wed_image_bck" data-color="#f8d1b9">
+            <div class="wed_heart_container_row_4"><img class="wed_fourth_heart_1" src="images/heart_1.png" alt=""> <img
+                    class="wed_fourth_heart_2" src="images/heart_2.png" alt=""> <img class="wed_fourth_heart_3"
+                    src="images/heart_3.png" alt=""></div>
+            <div class=""><img src="images/black_white_couple_5-70x88.png" alt=""></div>
+        </div>
+    </div>
+    <div class="wed_page wed_middle_titles" id="wed_page">
+        <header class="wed_header">
+            <nav class="wed_light_nav wed_transp_nav">
+                <div class="container">
+                    <div class="logo_container"><img class="wed_couple_header wed_kissing_couple animated extra"
+                            src="images/black_white_couple_invert-50x45.png" alt="" /> <img
+                            class="wed_couple_header wed_white_couple animated extra"
+                            src="images/black_white_couple-50x45.png" alt="" />
+                        <div class="wed_text_container" class="wed_logo wed_logo_animation" data-color="#FF00FF"> Quốc
+                            Khánh & Lệ Giang</a>
+                            <div class="wed_logo_und">28.02.2021</div>
+                        </div>
+                    </div>
+                    <div class="wed_top_menu_mobile_link"><i class="ti ti-menu"></i></div>
+                    <div class="wed_top_menu_cont">
+                        <div class="container">
+                            <div class="menu-menu-1-container">
+                                <ul id="primary-menu" class="menu">
+                                    <li id="menu-item-1616"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1616">
+                                        <a target="_blank"
+                                            href="https://www.google.com/maps/place/20%C2%B051'44.1%22N+105%C2%B052'15.3%22E/@20.8622503,105.8703698,19z/data=!3m1!4b1!4m14!1m7!3m6!1s0x3135b17e19c4568b:0x4f5a5843cd59ead3!2zSMOgIEjhu5NpLCBUaMaw4budbmcgVMOtbiwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!3b1!8m2!3d20.8628013!4d105.8789403!3m5!1s0x0:0x0!7e2!8m2!3d20.8622488!4d105.8709175?hl=vi-VN">Bản
+                                            đồ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="container-full-slider">
+            <div class="wed_slider_carousel wed_shop_slider wed_slider_txt_animation">
+                <div class="wed_slider wed_image_bck wed_wht_txt" data-color="" data-image="images/01.jpg">
+                    <div class="wed_over" data-color="#1e1e1e" data-opacity="0.6"></div>
+                    <div class="container">
+                        <!-- div class="fw-row"> -->
+
+                        <div>
+                            <div class="wed_simple_block">
+
+                            </div>
+                        </div>
+                        <div class="wed_slide_txt wed_slide_right_middle text-center" data-0="opacity:1;"
+                            data--400-bottom="opacity:0;"><img src="images/ac.png" alt=""></div>
+
+
+
+                    </div>
+                    <a class="wed_scroll_down wed_go skrollable skrollable-between" href="#wed_content"
+                        data-0="opacity:1; bottom:40px;" data--400-bottom="opacity:0; bottom:80px;"
+                        style="opacity: 1; bottom: 40px;"> <b data-0="height:40px" data--400-bottom="height:55px"
+                            class="skrollable skrollable-between" style="height: 40px;"></b> Scroll </a>
+                </div>
+            </div>
+        </div>
+        <section id="wed_content" class="wed_content">
+            <div class="fw-page-builder-content">
+                <section class="wed_section_inner wed_image_bck wed_wht_txt wed_fixed  "
+                    style=background-image:url(images/anh_nen2.JPG); data-stellar-background-ratio="0.2">
+                    <div class="wed_over" data-color="#000000" data-opacity="0.3"></div>
+                    <div class="container ">
+                        <div class="fw-row">
+                            <div class="fw-col-xs-12 wed_push_none  wed_image_bck   wed_col">
+                                <div class="  wed_simple_block_great"></div>
+                            </div>
+                        </div>
+                        <div class="fw-row">
+                            <div class="fw-col-xs-12 fw-col-sm-6 wed_push_none  wed_image_bck text-center  wed_col">
+                                <div class="wed_simple_block">
+                                    <div class="text_block">
+                                        <a style="text-decoration: none;" onMouseOver="this.style.color='hotpink'"
+                                            onMouseOut="this.style.color='#FFF'" title="Khanhgiang" href="">
+                                            <h2>Lệ Giang</h2>
+                                        </a>
+                                        <h4>Cô dâu</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fw-col-xs-12 fw-col-sm-6 wed_push_none  wed_image_bck text-center  wed_col">
+                                <div class="wed_simple_block">
+                                    <div class="text_block">
+                                        <a style="text-decoration: none;" onMouseOver="this.style.color='#3b5998'"
+                                            onMouseOut="this.style.color='#FFF'" title="Khanhgiang" href="#">
+                                            <h2>Quốc Khánh</h2>
+                                        </a>
+                                        <h4>Chú rể</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="wed_white_outter_border">
+                    <section class="wed_section_inner wed_image_bck">
+                        <div class="container ">
+                            <div class="fw-row">
+                                <div class="fw-col-xs-12   wed_image_bck   wed_col">
+                                    <div class=" ">
+                                        <div class="text-center">
+                                            <div class="wed_topstory_titile wed_great_titles">
+                                                <h2 class="wed_without_after"> Our<img class="wed_story_title_img"
+                                                        src="images/object_139-130x62.png" alt="">Story</h2>
+                                            </div>
+                                        </div>
+                                        <div data-animation="animation_blocks" data-bottom="@class:noactive"
+                                            data--10-bottom="@class:active">
+                                            <div class="row wed_story_row">
+                                                <div class="col-sm-12 col-md-5 text-center wed_bd ">
+                                                    <div class="wed_second_border wed_image_bck" data-border="#edc082">
+                                                    </div>
+                                                    <div class="wed_portfolio_item wed_story_img">
+                                                        <div class="wed_portfolio_item_cont wed_story_cont wed_image_bck"
+                                                            data-border="#edc082"><img class="wed_img_height"
+                                                                src="images/lan_dau_noi_chuyen.JPG" alt="">
+                                                            <span class="wed_port_titles"> <span
+                                                                    class="wed_port_title"></span> <span
+                                                                    class="wed_port_subtitle"></span> <span
+                                                                    class="wed_port_icons"> <a
+                                                                        href="images/lan_dau_noi_chuyen.JPG"
+                                                                        class="lightbox"><i
+                                                                            class="ti ti-search"></i></a> </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 hidden-sm hidden-xs text-center">
+                                                    <div class="wed_story_center">
+                                                        <div class="wed_story_content wed_image_bck"
+                                                            data-color="#edc082">
+                                                            <div class="wed_heart_container_row_2"><img
+                                                                    class="wed_second_heart_1" src="images/heart_3.png"
+                                                                    alt=""> <img class="wed_second_heart_2"
+                                                                    src="images/heart_1.png" alt=""> <img
+                                                                    class="wed_second_heart_3" src="images/heart_2.png"
+                                                                    alt="">
+                                                            </div>
+                                                            <div class=""><img src="images/object_44-40x60.png" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-5 ">
+                                                    <div class="wed_story_txt">
+                                                        <div class="wed_month_year"></div>
+                                                        <h3>First - Time</h3>
+                                                        <h5> </h5>
+
+                                                        <p
+                                                            style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Times, serif;">
+                                                            Chúng tôi vô tình được biết và quen nhau qua những lần tôi
+                                                            order và tìm mua các đồ công nghệ, phụ kiện điện thoại
+                                                            online.
+                                                            <br> Chúng tôi nói chuyện qua app Zalo, cùng chia sẻ và tâm
+                                                            sự những điều muộn phiền trong cuộc sống........ </br>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="wed_vertical_line wed_line_top hidden-sm hidden-xs wed_image_bck"
+                                                    data-border="#edc082">
+                                                    <div class="wed_circle wed_image_bck" data-color="#edc082"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-animation="animation_blocks" data-bottom="@class:noactive"
+                                            data--10-bottom="@class:active">
+                                            <div class="row wed_story_row">
+                                                <div class="col-sm-12 col-md-5 text-center wed_bd col-md-push-7">
+                                                    <div class="wed_second_border wed_image_bck" data-border="#edc082">
+                                                    </div>
+                                                    <div class="wed_portfolio_item wed_story_img">
+                                                        <div class="wed_portfolio_item_cont wed_story_cont wed_image_bck"
+                                                            data-border="#edc082"><img class="wed_img_height"
+                                                                src="images/ngay_dau_gap.JPG" alt=""> <span
+                                                                class="wed_port_titles"> <span
+                                                                    class="wed_port_title"></span> <span
+                                                                    class="wed_port_subtitle"></span> <span
+                                                                    class="wed_port_icons"> <a
+                                                                        href="images/ngay_dau_gap.JPG"
+                                                                        class="lightbox"><i
+                                                                            class="ti ti-search"></i></a> </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 hidden-sm hidden-xs text-center">
+                                                    <div class="wed_story_center">
+                                                        <div class="wed_story_content wed_image_bck"
+                                                            data-color="#edc082">
+                                                            <div class="wed_heart_container_row_2"><img
+                                                                    class="wed_second_heart_1" src="images/heart_3.png"
+                                                                    alt=""> <img class="wed_second_heart_2"
+                                                                    src="images/heart_1.png" alt=""> <img
+                                                                    class="wed_second_heart_3" src="images/heart_2.png"
+                                                                    alt=""></div>
+                                                            <div class=""><img src="images/object_19-61x60.png" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-5 col-md-pull-7">
+                                                    <div class="wed_story_txt">
+                                                        <div class="wed_month_year">06/08/2018</div>
+                                                        <h3>first-met</h3>
+
+                                                        <h5>Lần đầu được gặp gỡ và Rung động trong tim </h5>
+
+                                                        <p
+                                                            style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Times, serif;">
+                                                            Một ngày dài và mệt mỏi khi đi làm về.
+                                                            Tạt vào ven đường, tôi tự thưởng cho mình 1 cốc
+                                                            trà đá.
+                                                            <br>"Ting Ting" - Tiếng chuông tin nhắn báo tin nhắn mới.
+                                                            Thật bất ngờ đó là tin nhắn của em chúc mừng sinh nhật cho tôi: <br
+                                                                style="font-style: italic;"> "Chúc mừng sinh nhật anh
+                                                            Khánh. Hôm nay em có được ăn ké bánh sinh nhật ko ạ!" </br>
+                                                            <!-- (♥_♥) Woa...Tôi nghĩ mình thật hạnh phúc vì vẫn có người
+                                                            quan tâm đến mình (♥_♥). -->
+                                                            Chờ em tan làm, tôi và em vào 1 quán trà sữa gần đó 
+                                                            và cùng hát mừng sinh nhật <br>｡◕‿◕｡Đó cũng là ngày đầu
+                                                            tiên mà chúng tôi được gặp nhau....
+                                                            </br>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="wed_vertical_line wed_line_top hidden-sm hidden-xs wed_image_bck"
+                                                    data-border="#edc082">
+                                                    <div class="wed_circle wed_image_bck" data-color="#edc082"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-animation="animation_blocks" data-bottom="@class:noactive"
+                                            data--10-bottom="@class:active">
+                                            <div class="row wed_story_row">
+                                                <div class="col-sm-12 col-md-5 text-center wed_bd ">
+                                                    <div class="wed_second_border wed_image_bck" data-border="#edc082">
+                                                    </div>
+                                                    <div class="wed_portfolio_item wed_story_img">
+                                                        <div class="wed_portfolio_item_cont wed_story_cont wed_image_bck"
+                                                            data-border="#edc082"><img class="wed_img_height"
+                                                                src="images/cam_tay_nhau.JPG" alt=""> <span
+                                                                class="wed_port_titles"> <span
+                                                                    class="wed_port_title"></span> <span
+                                                                    class="wed_port_subtitle"></span> <span
+                                                                    class="wed_port_icons"> <a
+                                                                        href="images/cam_tay_nhau.JPG"
+                                                                        class="lightbox"><i
+                                                                            class="ti ti-search"></i></a> </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 hidden-sm hidden-xs text-center">
+                                                    <div class="wed_story_center">
+                                                        <div class="wed_story_content wed_image_bck"
+                                                            data-color="#edc082">
+                                                            <div class="wed_heart_container_row_2"><img
+                                                                    class="wed_second_heart_1" src="images/heart_3.png"
+                                                                    alt=""> <img class="wed_second_heart_2"
+                                                                    src="images/heart_1.png" alt=""> <img
+                                                                    class="wed_second_heart_3" src="images/heart_2.png"
+                                                                    alt=""></div>
+                                                            <div class=""><img src="images/object_44-40x60.png" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-5 ">
+                                                    <div class="wed_story_txt">
+                                                        <div class="wed_month_year">26/08/2018</div>
+                                                        <h3>Where Love Begins</h3>
+                                                        <h5>Ngày tình yêu bắt đầu</h5>
+                                                        <p
+                                                            style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Times, serif;">
+                                                            ....Sau những ngày cùng nói chuyện và chia sẻ với nhau,
+                                                            chúng tôi hẹn hò nhau sau giờ tan làm.
+                                                            Vẫn tại quán trà sữa đó, tôi đã xin phép cầm tay em và ngỏ ý nói lời yêu em. Em đã đồng ý trước lời ngỏ ý của
+                                                            tôi 💗.<br>💗 Ngày hôm đó đã đánh dấu mốc quan trọng trong chuyện
+                                                            tình cảm của chúng tôi 💗....
+                                                            <br></br>
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="wed_vertical_line wed_line_top hidden-sm hidden-xs wed_image_bck"
+                                                    data-border="#edc082">
+                                                    <div class="wed_circle wed_image_bck" data-color="#edc082"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-animation="animation_blocks" data-bottom="@class:noactive"
+                                            data--10-bottom="@class:active">
+                                            <div class="row wed_story_row">
+                                                <div class="col-sm-12 col-md-5 text-center wed_bd ">
+                                                    <div class="wed_second_border wed_image_bck" data-border="#edc082">
+                                                    </div>
+                                                    <div class="wed_portfolio_item wed_story_img">
+                                                        <div class="wed_portfolio_item_cont wed_story_cont wed_image_bck"
+                                                            data-border="#edc082"><img class="wed_img_height"
+                                                                src="images/di_tam_dao.JPG " alt=""> <span
+                                                                class="wed_port_titles"> <span
+                                                                    class="wed_port_title"></span> <span
+                                                                    class="wed_port_subtitle"></span> <span
+                                                                    class="wed_port_icons"> <a
+                                                                        href="images/di_tam_dao.JPG "
+                                                                        class="lightbox"><i
+                                                                            class="ti ti-search"></i></a> </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 hidden-sm hidden-xs text-center">
+                                                    <div class="wed_story_center">
+                                                        <div class="wed_story_content wed_image_bck"
+                                                            data-color="#edc082">
+                                                            <div class="wed_heart_container_row_2"><img
+                                                                    class="wed_second_heart_1" src="images/heart_3.png"
+                                                                    alt=""> <img class="wed_second_heart_2"
+                                                                    src="images/heart_1.png" alt=""> <img
+                                                                    class="wed_second_heart_3" src="images/heart_2.png"
+                                                                    alt=""></div>
+                                                            <div class=""><img src="images/object_16-77x60.png" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-5 ">
+                                                    <div class="wed_story_txt">
+                                                        <div class="wed_month_year">2018-2021</div>
+                                                        <h3>Love picture</h3>
+                                                        <h5>👨‍❤️‍💋‍👨Những ngày tháng yêu nhau👨‍❤️‍💋‍👨</h5>
+                                                        <p
+                                                            style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Times, serif;">
+                                                            ...Cứ mỗi cuối tuần tôi và em được nghỉ. Chúng tôi lại được cùng nhau đi
+                                                            chơi, đi dạo phố. Cùng nhau lưu lại những bức ảnh đẹp nhất
+                                                            khi bên nhau👨‍❤️‍💋‍👨.... </p>
+                                                    </div>
+                                                </div>
+                                                <div class="wed_vertical_line wed_line_top hidden-sm hidden-xs wed_image_bck"
+                                                    data-border="#edc082">
+                                                    <div class="wed_circle wed_image_bck" data-color="#edc082"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-animation="animation_blocks" data-bottom="@class:noactive"
+                                            data--10-bottom="@class:active">
+                                            <div class="row wed_story_row">
+                                                <div class="col-sm-12 col-md-5 text-center wed_bd col-md-push-7">
+                                                    <div class="wed_second_border wed_image_bck" data-border="#edc082">
+                                                    </div>
+                                                    <div class="wed_portfolio_item wed_story_img">
+                                                        <div class="wed_portfolio_item_cont wed_story_cont wed_image_bck"
+                                                            data-border="#edc082"><img class="wed_img_height"
+                                                                src="images/engagement.jpg" alt=""> <span
+                                                                class="wed_port_titles"> <span
+                                                                    class="wed_port_title"></span> <span
+                                                                    class="wed_port_subtitle"></span> <span
+                                                                    class="wed_port_icons"> <a
+                                                                        href="images/engagement.jpg" class="lightbox"><i
+                                                                            class="ti ti-search"></i></a> </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 hidden-sm hidden-xs text-center">
+                                                    <div class="wed_story_center">
+                                                        <div class="wed_story_content wed_image_bck"
+                                                            data-color="#edc082">
+                                                            <div class="wed_heart_container_row_2"><img
+                                                                    class="wed_second_heart_1" src="images/heart_3.png"
+                                                                    alt=""> <img class="wed_second_heart_2"
+                                                                    src="images/heart_1.png" alt=""> <img
+                                                                    class="wed_second_heart_3" src="images/heart_2.png"
+                                                                    alt=""></div>
+                                                            <div class=""><img src="images/object_19-61x60.png" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-5 col-md-pull-7">
+                                                    <div class="wed_story_txt">
+                                                        <div class="wed_month_year"></div>
+                                                        <h3>In love</h3>
+                                                        <h5>Những năm tháng bên nhau</h5>
+                                                        <p
+                                                            style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Times, serif;">
+                                                            ....Trong tình yêu đôi khi luôn xảy ra những chuyện giận
+                                                            hờn, cãi vã....
+                                                           <br>Nhưng rồi chúng tôi cùng thông cảm và chia sẻ mọi điều,
+                                                            không ai được giấu ai bất kỳ điều gì
+                                                             và cả hai cùng nhau tìm cách giải quyết, tháo gỡ các vấn đề khó khăn trong cuộc sống mà
+                                                            cả hai người đang gặp phải. Như vậy chúng tôi mới
+                                                            hiểu nhau và ngày càng hạnh phúc hơn..💏‍...
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="wed_vertical_line wed_line_top hidden-sm hidden-xs wed_image_bck"
+                                                    data-border="#edc082">
+                                                    <div class="wed_circle wed_image_bck" data-color="#edc082"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-animation="animation_blocks" data-bottom="@class:noactive"
+                                            data--10-bottom="@class:active">
+                                            <div class="row wed_story_row">
+                                                <div class="col-sm-12 col-md-5 text-center wed_bd ">
+                                                    <div class="wed_second_border wed_image_bck" data-border="#edc082">
+                                                    </div>
+                                                    <div class="wed_portfolio_item wed_story_img">
+                                                        <div class="wed_portfolio_item_cont wed_story_cont wed_image_bck"
+                                                            data-border="#edc082"><img class="wed_img_height"
+                                                                src="images/anh_cau_hon.jpg" alt=""> <span
+                                                                class="wed_port_titles"> <span
+                                                                    class="wed_port_title"></span> <span
+                                                                    class="wed_port_subtitle">Khánh Giang</span> <span
+                                                                    class="wed_port_icons"> <a
+                                                                        href="images/anh_cau_hon.jpg"
+                                                                        class="lightbox"><i
+                                                                            class="ti ti-search"></i></a> </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 hidden-sm hidden-xs text-center">
+                                                    <div class="wed_story_center">
+                                                        <div class="wed_story_content wed_image_bck"
+                                                            data-color="#edc082">
+                                                            <div class="wed_heart_container_row_2"><img
+                                                                    class="wed_second_heart_1" src="images/heart_3.png"
+                                                                    alt=""> <img class="wed_second_heart_2"
+                                                                    src="images/heart_1.png" alt=""> <img
+                                                                    class="wed_second_heart_3" src="images/heart_2.png"
+                                                                    alt=""></div>
+                                                            <div class=""><img src="images/object_16-77x60.png" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-5 ">
+                                                    <div class="wed_story_txt">
+                                                        <div class="wed_month_year">01/01/2021</div>
+                                                        <h3>propose</h3>
+                                                        <h5></h5>
+                                                        <p
+                                                            style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Times, serif;">
+                                                            ....Sau những ngày tháng yêu nhau và tìm hiểu về nhau. Có
+                                                            giận hờn, có buồn vui và có đủ sự chín chắn, trưởng thành.
+                                                            <br>👨‍❤️‍💋‍👨Vào một ngày thật đặc biệt và quan trọng. Tôi đã quyết định cầu hôn cô ấy và đã được cô ấy đồng ý cưới tôi.
+                                                            Chúng tôi sẽ được về chung một nhà để cùng nhau xây dựng hạnh phúc gia đình....🏡❤👨‍🍳👨‍🌾
+                                                            👨‍👩‍👧‍👦 👨‍❤️‍💋‍👨 ❤🏡 </br>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="wed_vertical_line wed_line_top hidden-sm hidden-xs wed_image_bck"
+                                                    data-border="#edc082">
+                                                    <div class="wed_circle wed_image_bck" data-color="#edc082"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-animation="animation_blocks" data-bottom="@class:noactive"
+                                            data--10-bottom="@class:active">
+                                            <div class="row wed_story_row">
+                                                <div class="col-sm-12 col-md-5 text-center wed_bd col-md-push-7">
+                                                    <div class="wed_second_border wed_image_bck" data-border="#edc082">
+                                                    </div>
+                                                    <div class="wed_portfolio_item wed_story_img">
+                                                        <div class="wed_portfolio_item_cont wed_story_cont wed_image_bck"
+                                                            data-border="#edc082"><img class="wed_img_height"
+                                                                src="images/vechung1nha.jpg" alt=""> <span
+                                                                class="wed_port_titles"> <span
+                                                                    class="wed_port_title"></span> <span
+                                                                    class="wed_port_subtitle"></span> <span
+                                                                    class="wed_port_icons"> <a
+                                                                        href="images/vechung1nha.jpg"
+                                                                        class="lightbox"><i
+                                                                            class="ti ti-search"></i></a> </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 hidden-sm hidden-xs text-center">
+                                                    <div class="wed_story_center">
+                                                        <div class="wed_story_content wed_image_bck"
+                                                            data-color="#edc082">
+                                                            <div class="wed_heart_container_row_2"><img
+                                                                    class="wed_second_heart_1" src="images/heart_3.png"
+                                                                    alt=""> <img class="wed_second_heart_2"
+                                                                    src="images/heart_1.png" alt=""> <img
+                                                                    class="wed_second_heart_3" src="images/heart_2.png"
+                                                                    alt=""></div>
+                                                            <div class=""><img src="images/object_19-61x60.png" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-5 col-md-pull-7">
+                                                    <div class="wed_story_txt">
+                                                        <div class="wed_month_year">2021+</div>
+                                                        <h3>To be continued...</h3>
+                                                        <!-- <h5 style="font-family: 'Times New Roman', Times, serif;">Wedding is not an end, it's a remarkable point on our road</h5> -->
+                                                        <p
+                                                            style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Times, serif;">
+                                                            ...Và từ bây giờ, chúng tôi sẽ về chung một nhà. Cùng nhau
+                                                            viết tiếp những câu chuyện về ngôi nhà và những đứa trẻ bên mái ấm hạnh phúc gia đình của chúng tôi
+                                                            👨‍👩‍👧‍👦 🏡........
+                                                            <br> 😘 Các bạn hãy gửi những lời chúc hạnh phúc tốt đẹp nhất cho
+                                                            chúng tôi nhé✍😘 !!!!!
+                                                            <br> ♡ Thanks and best regards ♡ !!!
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="wed_vertical_line wed_line_top hidden-sm hidden-xs wed_image_bck"
+                                                    data-border="#edc082">
+                                                    <div class="wed_circle wed_image_bck" data-color="#edc082"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- ///khanh -->
+                                        <div data-animation="animation_blocks" data-bottom="@class:noactive"
+                                            data--10-bottom="@class:active">
+                                            <div class="row wed_story_row">
+                                                <div class="col-sm-12 col-md-5 text-center wed_bd ">
+                                                    <div class="wed_second_border wed_image_bck" data-border="#edc082">
+                                                    </div>
+                                                    <div class="wed_portfolio_item wed_story_img">
+                                                        <div class="wed_portfolio_item_cont wed_story_cont wed_image_bck"
+                                                            data-border="#edc082"><img class="wed_img_height"
+                                                                src="images/cam_on_chame.jpg" alt=""> <span
+                                                                class="wed_port_titles"> <span
+                                                                    class="wed_port_title"></span> <span
+                                                                    class="wed_port_subtitle"></span> <span
+                                                                    class="wed_port_icons"> <a
+                                                                        href="images/cam_on_chame.jpg"
+                                                                        class="lightbox"><i
+                                                                            class="ti ti-search"></i></a> </span>
+                                                            </span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 hidden-sm hidden-xs text-center">
+                                                    <div class="wed_story_center">
+                                                        <div class="wed_story_content wed_image_bck"
+                                                            data-color="#edc082">
+                                                            <div class="wed_heart_container_row_2"><img
+                                                                    class="wed_second_heart_1" src="images/heart_3.png"
+                                                                    alt=""> <img class="wed_second_heart_2"
+                                                                    src="images/heart_1.png" alt=""> <img
+                                                                    class="wed_second_heart_3" src="images/heart_2.png"
+                                                                    alt=""></div>
+                                                            <div class=""><img src="images/object_44-40x60.png" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-5 ">
+                                                    <div class="wed_story_txt">
+                                                        <div class="wed_month_year"></div>
+                                                        <h3>Cảm ơn Cha mẹ</h3>
+                                                        <h5>Cảm ơn đấng sinh thành</h5>
+                                                        <p
+                                                            style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Times, serif;">
+                                                            💗 Trong cuộc đời này, điều may mắn nhất là chúng con được làm
+                                                            con của bố, mẹ. Chúng con xin cảm ơn Bố, Mẹ đã sinh ra chúng con và nuôi
+                                                            nấng, chăm sóc cho chúng con trưởng thành.
+                                                            <br>♡ Chúng con xin cảm ơn bố Hiện đã chịu nhiều vất vả để
+                                                            chăm lo cho cuộc sống của chúng con
+                                                            <br>♡ Chúng con xin cảm ơn bố Chung, mẹ Tĩnh đã sinh ra 1 thiên
+                                                            thần xinh đẹp cho con.
+                                                            <br>💗 Vợ chồng con hứa với bố mẹ sẽ hết lòng yêu thương nhau, chung thủy với nhau. Cùng
+                                                            nhau xây dựng hạnh phúc gia đình và hiếu thảo với cả 2 bên
+                                                            gia đình💗.
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="wed_vertical_line wed_line_top hidden-sm hidden-xs wed_image_bck"
+                                                    data-border="#edc082">
+                                                    <div class="wed_circle wed_image_bck" data-color="#edc082"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- ///khanh -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <section class="wed_section_inner wed_image_bck wed_wht_txt wed_fixed  "
+                    style=background-image:url(images/bg_8.jpg); data-stellar-background-ratio="0.2">
+                    <div class="wed_over" data-color="#edc082" data-opacity="0.9"></div>
+                    <div class="container text-center">
+                        <h2 class="wed_section_title">Don't miss it!</h2>
+                        <div class="fw-row">
+                            <div class="fw-col-xs-12   wed_image_bck   wed_col">
+                                <div class="  "><span class="wed_countdown" data-year="2023" data-month="2"
+                                        data-day="28"></span></div>
+                            </div>
+                        </div>
+
+
+
+                        
+                        <!-- <script>
+                            var today = new Date();
+                            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+                            
+                            document.getElementById("hvn").innerHTML = time;
+                           </script> -->
+
+                           
+                   </div>
+                </section>
+                <section class="wed_section_inner wed_image_bck wed_wht_txt wed_fixed  "
+                    style=background-image:url(images/bg_6.jpg); data-stellar-background-ratio="0.2">
+                    <div class="wed_over" data-color="#edc082" data-opacity="0.9"></div>
+                    <div class="container text-center">
+                        <div class="fw-row">
+                            <div class="fw-col-xs-12   wed_image_bck   wed_col">
+                                <div class="  ">
+                                    <div class="text-center">
+                                        <div class="wed_topstory_titile wed_great_titles">
+                                            <h2 class="wed_without_after"> Ceremony<img class="wed_story_title_img"
+                                                    src="images/object_140-130x70.png" alt="">Processing</h2>
+                                        </div>
+                                    </div>
+                                    <div data-animation="animation_blocks" data-bottom="@class:noactive"
+                                        data--10-bottom="@class:active">
+                                        <div class="row wed_story_row">
+                                            <div class="col-sm-12 col-md-5 text-center wed_bd ">
+                                                <div class="wed_second_border wed_image_bck" data-border=""></div>
+                                                <div class="wed_portfolio_item wed_story_img">
+                                                    <div class="wed_portfolio_item_cont wed_story_cont wed_image_bck"
+                                                        data-border=""><img class="wed_img_height"
+                                                            src="images/dam_ngo.JPG" alt=""> <span
+                                                            class="wed_port_titles"> <span
+                                                                class="wed_port_title"></span> <span
+                                                                class="wed_port_subtitle"></span> <span
+                                                                class="wed_port_icons"> <a href="images/dam_ngo.JPG"
+                                                                    class="lightbox"><i class="ti ti-search"></i></a>
+                                                            </span> </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 hidden-sm hidden-xs text-center">
+                                                <div class="wed_story_center">
+                                                    <div class="wed_story_content wed_image_bck" data-color="">
+                                                        <div class="wed_heart_container_row_2"><img
+                                                                class="wed_second_heart_1" src="images/heart_3.png"
+                                                                alt="">
+                                                            <img class="wed_second_heart_2" src="images/heart_1.png"
+                                                                alt="">
+                                                            <img class="wed_second_heart_3" src="images/heart_2.png"
+                                                                alt="">
+                                                        </div>
+                                                        <div class=""><img src="images/object_36-50x60.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-5 ">
+                                                <div class="wed_story_txt">
+                                                    <div class="wed_month_year">
+                                                        <h4> Lễ Dạm Ngõ</h4>
+                                                    </div>
+                                                    <!-- <h5 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Times, serif;">Được tổ chức vào ngày:  
+                                                        <br>Thứ Bảy, Ngày 02-01-2021</h5> -->
+                                                    <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Times, serif;"
+                                                        style="font-size:x-large"> 
+                                                        Đã được tổ chức vào Thứ Bảy, Ngày 02-01-2021
+                                                        <br>Tại Nhà gái
+                                                        </br>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="wed_vertical_line wed_line_top hidden-sm hidden-xs wed_image_bck"
+                                                data-border="">
+                                                <div class="wed_circle wed_image_bck" data-color=""></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-animation="animation_blocks" data-bottom="@class:noactive"
+                                        data--10-bottom="@class:active">
+                                        <div class="row wed_story_row">
+                                            <div class="col-sm-12 col-md-5 text-center wed_bd col-md-push-7">
+                                                <div class="wed_second_border wed_image_bck" data-border=""></div>
+                                                <div class="wed_portfolio_item wed_story_img">
+                                                    <div class="wed_portfolio_item_cont wed_story_cont wed_image_bck"
+                                                        data-border=""><img class="wed_img_height"
+                                                            src="images/trap_an_hoi.jpg" alt=""> <span
+                                                            class="wed_port_titles"> <span
+                                                                class="wed_port_title"></span> <span
+                                                                class="wed_port_subtitle"></span><span
+                                                                class="wed_port_icons"> <a
+                                                                    href="images/trap_an_hoi.jpg " class="lightbox"><i
+                                                                        class="ti ti-search"></i></a> </span> </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 hidden-sm hidden-xs text-center">
+                                                <div class="wed_story_center">
+                                                    <div class="wed_story_content wed_image_bck" data-color="">
+                                                        <div class="wed_heart_container_row_2"><img
+                                                                class="wed_second_heart_1" src="images/heart_3.png"
+                                                                alt="">
+                                                            <img class="wed_second_heart_2" src="images/heart_1.png"
+                                                                alt="">
+                                                            <img class="wed_second_heart_3" src="images/heart_2.png"
+                                                                alt="">
+                                                        </div>
+                                                        <div class=""><img src="images/object_118-55x60.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-5 col-md-pull-7">
+                                                <div class="wed_story_txt"> 
+                                                    <div class="wed_month_year" style="font-size:x-large"> 
+                                                        <h4>Lễ Ăn Hỏi Và Xin Dâu </h4>
+                                                        </div>
+                                                    <!-- <h6 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Times, serif;"
+                                                    style="font-size:x-large">Đưộc tổ chức vào 8:00 Thứ 7, ngày 27/02/2020 <br> tức
+                                                        ngày 16 tháng giêng (âm lịch) </h6> -->
+
+                                                    <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Times, serif;"
+                                                        style="font-size:xx-large" style="font-size: xx-large;">Được Tổ chức tại nhà gái
+                                                        <br>Chủ nhật, ngày 28/02/2020 <br> Tức
+                                                        ngày 17 tháng Giêng (âm lịch)
+                                                        
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="wed_vertical_line wed_line_top hidden-sm hidden-xs wed_image_bck"
+                                                data-border="">
+                                                <div class="wed_circle wed_image_bck" data-color=""></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-animation="animation_blocks" data-bottom="@class:noactive"
+                                        data--10-bottom="@class:active">
+                                        <div class="row wed_story_row">
+                                            <div class="col-sm-12 col-md-5 text-center wed_bd ">
+                                                <div class="wed_second_border wed_image_bck" data-border=""></div>
+                                                <div class="wed_portfolio_item wed_story_img">
+                                                    <div class="wed_portfolio_item_cont wed_story_cont wed_image_bck"
+                                                        data-border=""><img class="wed_img_height"
+                                                            src="images/thanhhon.jpg" alt="">
+                                                        <span class="wed_port_titles"> <span
+                                                                class="wed_port_title"></span> <span
+                                                                class="wed_port_subtitle"></span> <span
+                                                                class="wed_port_icons"> <a href="images/thanhhon.jpg"
+                                                                    class="lightbox"><i class="ti ti-search"></i></a>
+                                                            </span> </span>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 hidden-sm hidden-xs text-center">
+                                                <div class="wed_story_center">
+                                                    <div class="wed_story_content wed_image_bck" data-color="">
+                                                        <div class="wed_heart_container_row_2"><img
+                                                                class="wed_second_heart_1" src="images/heart_3.png"
+                                                                alt="">
+                                                            <img class="wed_second_heart_2" src="images/heart_1.png"
+                                                                alt="">
+                                                            <img class="wed_second_heart_3" src="images/heart_2.png"
+                                                                alt="">
+                                                        </div>
+                                                        <div class=""><img src="images/object_43-37x60.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-5 ">
+                                                <div class="wed_story_txt">
+                                                    <div class="wed_month_year">
+                                                        <!-- <br>Xin trân trọng kính mời quý vị và các bạn đến dự -->
+                                                    <!-- <br> Lễ thành hôn<br> Quốc Khánh 💗 Lệ Giang -->
+                                                </div>
+                                                    <h4>Lễ Thành hôn </h4>
+                                                    <div class="wed_month_year">
+                                                        Quốc Khánh 💗 Lệ Giang</div>
+                                                    <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Times, serif;"
+                                                        style="font-size:x-large"> <br> Đã được tổ chức vào 10:00 Chủ Nhật, ngày 28-02-2021 <br>Tức
+                                                        ngày 17 tháng giêng (âm lịch)
+                                                        <br>Địa điểm:  Tại Nhà Trai<br> </p>
+                                                </div>
+                                            </div>
+                                            <div class="wed_vertical_line wed_line_top hidden-sm hidden-xs wed_image_bck"
+                                                data-border="">
+                                                <div class="wed_circle wed_image_bck" data-color=""></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-animation="animation_blocks" data-bottom="@class:noactive"
+                                        data--10-bottom="@class:active">
+                                        <div class="row wed_story_row">
+                                            <div class="col-sm-12 col-md-5 text-center wed_bd col-md-push-7">
+                                                <div class="wed_second_border wed_image_bck" data-border=""></div>
+                                                <div class="wed_portfolio_item wed_story_img">
+                                                    <div class="wed_portfolio_item_cont wed_story_cont wed_image_bck"
+                                                        data-border=""><img class="wed_img_height"
+                                                            src="images/tiec_cuoi.jpg" alt=""> <span
+                                                            class="wed_port_titles"> <span
+                                                                class="wed_port_title"></span> <span
+                                                                class="wed_port_subtitle"></span> <span
+                                                                class="wed_port_icons"> <a href="images/tiec_cuoi.jpg"
+                                                                    class="lightbox"><i class="ti ti-search"></i></a>
+                                                            </span> </span>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-2 hidden-sm hidden-xs text-center">
+                                                <div class="wed_story_center">
+                                                    <div class="wed_story_content wed_image_bck" data-color="">
+                                                        <div class="wed_heart_container_row_2"><img
+                                                                class="wed_second_heart_1" src="images/heart_3.png"
+                                                                alt="">
+                                                            <img class="wed_second_heart_2" src="images/heart_1.png"
+                                                                alt="">
+                                                            <img class="wed_second_heart_3" src="images/heart_2.png"
+                                                                alt="">
+                                                        </div>
+                                                        <div class=""><img src="images/object_118-55x60.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-5 col-md-pull-7">
+                                                <div class="wed_story_txt">
+                                                    <h4>Thankyou </h4>
+                                                    <div class="wed_month_year" style="text-align: center;">
+                                                         Gia đình chúng tôi xin chân thành cảm ơn tất cả các Ông bà, cô dì chú bác bạn bè gần xa đã đến chung vui cùng gia đình tôi </div>
+                                                    <!-- <h4>Gia đình chúng tôi xin trân trọng kính mời bạn đến dự bữa cơm thân mật cùng gia đình chúng tôi</h4> -->
+                                                 
+                                                 <!-- tiệc cưới -->
+                                                    <!-- <h4>Tiệc cưới Nhà Trai</h4>
+                                                    <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Times, serif;"
+                                                        style="font-size:x-large">
+                                                        🕥 Thời gian:  10h30p , Chủ Nhật, Ngày 28/02/2021 <br> Tức ngày 17 tháng giêng (âm
+                                                        lịch)
+                                                        <br>
+                                                        📍 Địa điểm: Nhà Văn hóa Xóm Nguyễn Trãi - Xã Hà Hồi - Huyện Thường
+                                                        Tín - TP.Hà Nội
+                                                        <br>
+                                                        <a target="_blank"
+                                                            href="https://www.google.com/maps/place/20%C2%B051'44.1%22N+105%C2%B052'15.3%22E/@20.8622503,105.8703698,19z/data=!3m1!4b1!4m14!1m7!3m6!1s0x3135b17e19c4568b:0x4f5a5843cd59ead3!2zSMOgIEjhu5NpLCBUaMaw4budbmcgVMOtbiwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!3b1!8m2!3d20.8628013!4d105.8789403!3m5!1s0x0:0x0!7e2!8m2!3d20.8622488!4d105.8709175?hl=vi-VN">
+                                                            👉 Click vào đây để xem Bản đồ đến tiệc cưới và nhà Chú Rể</a>
+
+                                                    </p> -->
+
+
+                                                    
+                                                    <!-- <h4>Tiệc cưới Nhà Gái</h4>
+                                                    <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Times, serif;"
+                                                        style="font-size:x-large">
+                                                        🕥 Thời gian:  10h30p , Chủ Nhật, Ngày 28/02/2021 <br> Tức ngày 17 tháng giêng (âm
+                                                        lịch)
+                                                        
+                                                        <br>📍Địa điểm: Nhà Văn hóa Thôn 4 - Xã Vạn Phúc - Huyện Thanh Trì - TP.Hà Nội
+                                                        <br>
+                                                        <a target="_blank"
+                                                            href="https://www.google.com/maps/place/20%C2%B055'41.1%22N+105%C2%B050'44.1%22E/@20.9280613,105.8454499,21z/data=!4m5!3m4!1s0x0:0x0!8m2!3d20.9280779!4d105.8455827">
+                                                            👉 Click vào đây để xem Bản đồ đến tiệc cưới và nhà Cô Dâu</a>
+
+                                                    </p> -->
+                                                    
+                                                    <!-- <h5 style="font-family: serif">
+                                                        🎎Sự hiện diện của Quý vị là niềm vinh hạnh cho gia đình chúng tôi.</h5> -->
+                                                </div>
+                                            </div>
+                                            <div class="wed_vertical_line wed_line_top hidden-sm hidden-xs wed_image_bck"
+                                                data-border="">
+                                                <div class="wed_circle wed_image_bck" data-color=""></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="wed_section_inner wed_image_bck    ">
+                    <div class="container-fluid ">
+                        <div class="fw-row">
+                            <div class="fw-col-xs-12   wed_image_bck   wed_col">
+                                <div class="  ">
+                                    <div class="wed_map_wrapper ">
+                                        <div class="wed_map_over text-center wed_wht_txt">
+                                            <div class="wed_map_txt wed_icon_box"><span class="wed_map_img"><img
+                                                        src="images/object_137-79x70.png" alt=""></span>
+                                                <div class="wed_icon_box_content">
+                                                    <h4><b>Open Map</b></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="wed_over" data-color="#edc082" data-opacity="0.9"></div>
+                                        <div class="wed_map">
+                                            <p>
+                                                <iframe
+                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d932.0607643744241!2d105.8703695292172!3d20.862251252311648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDUxJzQ0LjEiTiAxMDXCsDUyJzE1LjMiRQ!5e0!3m2!1svi!2s!4v1609321087125!5m2!1svi!2s"
+                                                    width="600" height="450" frameborder="0" style="border:0;"
+                                                    allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="wed_white_outter_border">
+                    <section class="wed_section_inner wed_image_bck    ">
+                        <div class="container text-center">
+                            <h2 class="wed_section_title">💗Thư viện ảnh của chúng tôi💗</h2>
+                            <div class="fw-row">
+                                <div class="fw-col-xs-12 wed_image_bck wed_col">
+                                    <div class="">
+                                        <div class="wed_portfolio_no_padding grid">
+                                            <!-- khánhnq -->
+
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg1.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg1.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+
+
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg2.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg2.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg3.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg3.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg4.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg4.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg5.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg5.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg6.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg6.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg7.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg7.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg8.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg8.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg9.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg9.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <!-- khánhnq -->
+
+                                            <!-- khánhnq -->
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg10.1.JPG"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg10.1.JPG" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg11.1.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg11.1.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg12.1.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg12.1.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg13.JPG"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg13.JPG" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg14.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg14.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg15.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg15.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg16.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg16.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg17.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg17.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg18.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg18.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <!-- khánhnq -->
+
+
+                                            <!-- giang -->
+
+                                            <!-- khánhnq -->
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg19.JPG"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg19.JPG" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg20.JPG"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg20.JPG" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg21.JPG"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg21.JPG" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg22.JPG"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg22.JPG" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg23.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg23.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg24.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg24.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg25.JPG"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg25.JPG" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg26.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg26.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg27.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg27.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg28.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg28.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg29.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg29.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg30.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg30.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg31.1.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg31.1.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg32.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg32.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg34.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg34.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg33.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg33.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg35.1.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg35.1.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg36.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg36.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <!-- khánhnq -->
+                                            <!-- giang -->
+
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg37.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg37.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg38.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg38.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg39.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg39.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg40.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg40.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg41.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg41.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg42.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg42.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg43.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg43.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg44.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg44.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg45.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg45.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                href="images/kg46.jpg"
+                                                class="lightbox wed_portfolio_item_cont">
+                                                <img alt="" src="images/kg46.jpg" /> <span
+                                                    class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                    <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                    </span> </span></a>
+                                            </div>
+                                                <!-- tiếp -->
+
+                                                <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg50.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg50.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg51.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg51.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg52.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg52.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg53.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg53.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg54.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg54.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg55.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg55.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg56.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg56.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg57.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg57.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg58.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg58.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                href="images/kg59.jpg"
+                                                class="lightbox wed_portfolio_item_cont">
+                                                <img alt="" src="images/kg59.jpg" /> <span
+                                                    class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                    <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                    </span> </span></a>
+                                            </div>
+                                                <!-- 11 -->
+
+                                                <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg60.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg60.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg61.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg61.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg62.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg62.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg63.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg63.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg64.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg64.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg65.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg65.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg66.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg66.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg67.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg67.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg69.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg69.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                href="images/kg70.jpg"
+                                                class="lightbox wed_portfolio_item_cont">
+                                                <img alt="" src="images/kg70.jpg" /> <span
+                                                    class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                    <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                    </span> </span></a>
+                                            </div>
+                                                <!-- tiếp -->
+                                                <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg71.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg71.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg72.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg72.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg73.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg73.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg74.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg74.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg75.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg75.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg76.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg76.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg77.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg77.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg78.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg78.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                    href="images/kg79.jpg"
+                                                    class="lightbox wed_portfolio_item_cont">
+                                                    <img alt="" src="images/kg79.jpg" /> <span
+                                                        class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                        <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                        </span> </span></a>
+                                            </div>
+                                            <div class="col-sm-4 wed_portfolio_item grid-item"><a
+                                                href="images/kg80.jpg"
+                                                class="lightbox wed_portfolio_item_cont">
+                                                <img alt="" src="images/kg80.jpg" /> <span
+                                                    class="wed_port_titles"> <span class="wed_port_title"></span>
+                                                    <span class="wed_port_icons"> <i class="ti ti-search"></i>
+                                                    </span> </span></a>
+                                            </div>
+                                                <!-- tiếp -->
+
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <section class="wed_section_inner wed_image_bck wed_wht_txt wed_fixed  "
+                    style=background-image:url(images/bg.jpg); data-stellar-background-ratio="0.2">
+                    <div class="wed_over" data-color="#edc082" data-opacity="0.9"></div>
+                    <div class="container text-center">
+                        <div class="wed_thin_titles">
+                            <h5 style="font-family: 'Times New Roman', Times, serif;">🎎 “Xin chân thành cảm ơn mọi người đã chúc phúc cho chúng tôi!🎎
+                                <br> Chúc mọi người năm mới an khang thịnh vượng 🎉"
+                            </h5>
+                        </div>
+                        <div class="fw-row">
+                            <div class="fw-col-xs-12 enh_push_none  wed_image_bck   wed_col">
+                                <div class="  "></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <footer class="wed_footer">
+            </footer>
+        </section>
+    </div>
+    <!-- <iframe src="audio/source.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+</iframe> 
+<audio controls id="idAudio" >
+    <source src="sounds/Beautiful_In_White.mp3" type="audio/mpeg">
+</audio> -->
+
+    <audio id="autoplay" controls>
+        <source src="sounds/Beautiful_In_White.mp3">
+    </audio>
+
+    <script>
+        document.getElementById('autoplay').play();
+    </script>
+    <!-- <script>
+ window.addEventListener("DOMContentLoaded", event => {
+  const audio = document.querySelector("audio");
+  audio.volume = 0.2;
+  audio.play();
+});
+
+
+
+<script>
+	document.getElementById('autoplay').play();
+</script> -->
+
+
+
+    <!-- <audio autoplay> 
+    <source src="sounds/Beautiful_In_White.mp3" type="audio/mp3">
+</audio> -->
+    <!-- <audio src="sounds/Beautiful_In_White.mp3" autoplay>
+</audio> -->
+    <!-- <audio src="sounds/Beautiful_In_White.mp3" autoplay loop>
+</audio> -->
+    <script>
+        /*  */
+        var _wpcf7 = {
+            "recaptcha": {
+                "messages": {
+                    "empty": "Please verify that you are not a robot."
+                }
+            }
+        };
+        /*  */
+
+        jQuery(document).ready(function (jQuery) {
+            jQuery.datepicker.setDefaults({
+                "closeText": "Close",
+                "currentText": "Today",
+                "monthNames": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                "monthNamesShort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                "nextText": "Next",
+                "prevText": "Previous",
+                "dayNames": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                "dayNamesShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+                "dayNamesMin": ["S", "M", "T", "W", "T", "F", "S"],
+                "dateFormat": "MM d, yy",
+                "firstDay": 1,
+                "isRTL": false
+            });
+        });
+
+        /*  */
+        var thickboxL10n = {
+            "next": "Next >",
+            "prev": "< Prev",
+            "image": "Image",
+            "of": "of",
+            "close": "Close",
+            "noiframes": "This feature requires inline frames. You have iframes disabled or your browser does not support them.",
+            "loadingAnimation": "images\/loadingAnimation.gif"
+        };
+    /*  */
+    </script>
+    <script defer src="js/autoptimize_4c7a21032ed0f0652f5854a665252e17.js"></script>
+</body>
+
+</html>
